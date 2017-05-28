@@ -1,17 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng-test"
+    "name": "aspnet-angular2",
+    "ejected": true
   },
   "apps": [
     {
-      "root": "src",
-      "outDir": "dist",
+      "root": "ClientApp",
+      "outDir": "wwwroot",
       "assets": [
         "assets",
         "favicon.ico"
       ],
-      "index": "index.html",
+      "index": "./../Views/Shared/_WebpackTemplate.cshtml",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
@@ -19,9 +20,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -36,10 +38,10 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "ClientApp/tsconfig.app.json"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "ClientApp/tsconfig.spec.json"
     },
     {
       "project": "e2e/tsconfig.e2e.json"
@@ -51,7 +53,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }
